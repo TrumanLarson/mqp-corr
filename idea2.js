@@ -63,6 +63,16 @@ const drawEllipse = (data, svg, width, height, color, r) => {
         .attr('rx', ellipseData.ellipse_minor)
         .attr('ry', ellipseData.ellipse_major)
 
+    svg.append('ellipse')
+        .attr('rx', 0)
+        .attr('ry', 0)
+        .attr('stroke', color)
+        .attr('fill', 'none')
+        .attr('transform', 'translate(' + cx + ',' + cy + ') rotate(49)')
+        .transition().duration(animationDuration / 2)
+        .attr('rx', ellipseData.ellipse_minor)
+        .attr('ry', ellipseData.ellipse_major)
+
 }
 
 const drawTrendline = (data, svg, width, height) => {
