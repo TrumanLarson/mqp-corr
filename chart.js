@@ -1,4 +1,4 @@
-export function createChart(svg, width, height, data, color) {
+export function createChart(svg, width, height, data) {
     // const {
     //     width,
     //     height,
@@ -53,5 +53,5 @@ export function createChart(svg, width, height, data, color) {
         .attr("cy", d => {
             return yScale(d[1])
         })
-        .style("fill", color)
+        .style("fill", 'black')
 }
