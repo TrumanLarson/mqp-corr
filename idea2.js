@@ -51,7 +51,7 @@ const drawEllipse = (data, svg, width, height, color, r) => {
     const cy = (inner_height) / 2
 
     const ellipseData = ellipse(r)
-    console.log(ellipseData)
+
     svg.append('ellipse')
         .attr('rx', 0)
         .attr('ry', 0)
