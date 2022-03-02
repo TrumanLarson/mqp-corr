@@ -77,6 +77,28 @@ const drawMargin = (data, svg, width, height, color) => {
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0)
         .duration(animationDuration / 2)
+
+    svg.append("polygon")
+        .attr("points", function() {
+            return [
+                topLineData[0].join(","),
+                topLineData[0].join(","),
+                botLineData[0].join(","),
+                botLineData[0].join(",")
+            ].join(" ")
+        })
+        .attr("stroke", "none")
+        .attr("fill", color)
+        .attr("opacity", 0.1)
+        .transition().duration(animationDuration / 2)
+        .attr("points", function() {
+            return [
+                topLineData[0].join(","),
+                topLineData[1].join(","),
+                botLineData[1].join(","),
+                botLineData[0].join(",")
+            ].join(" ")
+        })
 }
 
 const drawTrendline = (data, svg, width, height) => {
