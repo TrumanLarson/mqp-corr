@@ -106,8 +106,8 @@ const buildChart = (data1, data2, svg, width, height, r1, r2) => {
     const g1 = svg.append("g")
     const g2 = svg.append("g").attr("transform", "translate(400, 0)")
 
-    const color1 = 'green'
-    const color2 = 'blue'
+    const color1 = 'orange'
+    const color2 = '#1A1AF9'
 
     createChart(g1, width, height, data1, 'green')
     createChart(g2, width, height, data2, 'blue')
@@ -128,7 +128,7 @@ const buildChart = (data1, data2, svg, width, height, r1, r2) => {
         .attr('opacity', 1)
         .style('fill', 'black')
         .transition().ease(d3.easePoly).duration(animationDuration)
-        .attr("opacity", .3)
+        .attr("opacity", .9)
         .style('fill', color1)
 
     g2.transition().delay(animationDuration / 2).duration(animationDuration)
@@ -141,7 +141,7 @@ const buildChart = (data1, data2, svg, width, height, r1, r2) => {
         .attr('opacity', 1)
         .style('fill', 'black')
         .transition().ease(d3.easePoly).duration(animationDuration)
-        .attr("opacity", .3)
+        .attr("opacity", .9)
         .style('fill', color2)
 }
 
