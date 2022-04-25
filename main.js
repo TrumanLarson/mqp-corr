@@ -1,11 +1,24 @@
-import { idea1 } from "./idea1.js"
-import { idea2 } from "./idea2.js"
-import { generateDataSet } from "./datagen.js"
+import { boundingBox } from "./ideas/boundingBox.js"
+import { distance } from "./ideas/distance.js"
+import { ellipse } from "./ideas/ellipse.js"
+import { generateDataSet } from "./base/datagen.js"
 
-const width = 400
-const height = 400
 let r1 = .5
 let r2 = .6
+
+const specs = {
+    width: 400,
+    height: 400,
+    margin: {
+        left: 40,
+        top: 20,
+        right: 20,
+        bottom: 20,
+    },
+    animationDuration: 2500,
+    color1: 'green',
+    color2: 'blue',
+}
 
 const getData = (r) => {
     return generateDataSet(r)
@@ -44,6 +57,6 @@ export function draw() {
 
     const data1 = getData(r1)
     const data2 = getData(r2)
-    idea2(data1, data2, width, height, r1, r2)
-    idea1(data1, data2, width, height)
+    ellipse(data1, data2, specs, r1, r2)
+    distance(data1, data2, specs)
 }
