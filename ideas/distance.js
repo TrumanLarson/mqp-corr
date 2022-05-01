@@ -1,18 +1,16 @@
-import { createChart } from "../base/chart.js"
-import { animateMerge } from "../addons/merge.js";
-import { drawTrendline } from "../addons/trendline.js";
+import { buildChart } from '../base/buildChart.js'
 
 
 const disToLine = (x, y, inner_width, inner_height) => {
-    let x1 = 10
-    let x2 = inner_width - 10
-    let y1 = inner_height - 10
-    let y2 = 10
+    let x1 = 0
+    let x2 = inner_width
+    let y1 = inner_height
+    let y2 = 0
+
     let m = (y2 - y1) / (x2 - x1)
     let C = (m * x2) - y2
     let B = 1
     let A = -m
-    console.log(Math.sqrt((A * A) + (B * B)))
     return ((A * x) + (B * y) + C) / Math.sqrt((A * A) + (B * B))
 }
 
@@ -37,36 +35,29 @@ const drawDistances = (data, svg, specs, color) => {
         .attr('class', 'dis')
         .attr('d', d => {
             const dis = disToLine(xScale(d[0]), yScale(d[1]), inner_width, inner_height)
+            let angle = 42.75
             return line([
                 [xScale(d[0]), yScale(d[1])],
-                [xScale(d[0]) - (dis / root2), yScale(d[1]) - (dis / root2)]
+                [xScale(d[0]) - (dis * Math.cos(angle * Math.PI / 180)), yScale(d[1]) - (dis * Math.sin(angle * Math.PI / 180))]
             ])
         })
         .attr("stroke", color)
-}
+        .attr("opacity", 0.5)
 
+    // const length = path.node().getTotalLength();
 
-const buildChart = (data1, data2, svg, specs, r1, r2) => {
-    console.log("building distances...")
-    const g1 = svg.append("g")
-    const g2 = svg.append("g").attr("transform", "translate(400, 0)")
+    // path.attr("stroke-dasharray", length + " " + length)
+    //     .attr("stroke-dashoffset", length)
+    //     .transition()
+    //     .ease(d3.easeLinear)
+    //     .attr("stroke-dashoffset", 0)
+    //     .duration(specs.animationDuration / 2)
 
-
-    createChart(g1, specs.width, specs.height, data1, specs.color1)
-    createChart(g2, specs.width, specs.height, data2, specs.color2)
-
-    drawDistances(data1, g1, specs, specs.color1)
-    drawDistances(data2, g2, specs, specs.color2)
-
-    drawTrendline(data1, g1, specs)
-    drawTrendline(data2, g2, specs)
-
-    animateMerge(g1, g2, specs)
 }
 
 
 export function distance(data1, data2, specs, r1, r2) {
     const svg = d3.select('#container')
         .append('svg').attr('width', specs.width * 2).attr('height', specs.height)
-    buildChart(data1, data2, svg, specs, r1, r2)
+    buildChart(data1, data2, svg, specs, r1, r2, drawDistances)
 }

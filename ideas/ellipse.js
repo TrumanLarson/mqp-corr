@@ -1,11 +1,4 @@
-import { createChart } from "../base/chart.js"
-import { animateMerge } from "../addons/merge.js";
-import { drawTrendline } from "../addons/trendline.js";
-
-let animationDuration = null
-
-let margin = null
-
+import { buildChart } from '../base/buildChart.js'
 
 const ellipseMath = function(r) {
     var avgX = 150,
@@ -33,9 +26,9 @@ const ellipseMath = function(r) {
     }
 }
 
-const drawEllipse = (data, svg, width, height, color, r) => {
-    const inner_height = height - margin.bottom;
-    const inner_width = width - margin.left - margin.right;
+const drawEllipse = (data, svg, specs, color, r) => {
+    const inner_height = specs.height - specs.margin.bottom;
+    const inner_width = specs.width - specs.margin.left - specs.margin.right;
     const xAry = data.map(d => d[0]);
     const yAry = data.map(d => d[1]);
     var xScale = d3.scaleLinear().range([0, inner_width]);
@@ -45,7 +38,6 @@ const drawEllipse = (data, svg, width, height, color, r) => {
 
     const cx = (inner_width) / 2
     const cy = (inner_height) / 2
-
     const ellipseData = ellipseMath(r)
 
     svg.append('ellipse')
@@ -54,8 +46,8 @@ const drawEllipse = (data, svg, width, height, color, r) => {
         .attr('stroke', color)
         .attr('fill', color)
         .attr('opacity', .1)
-        .attr('transform', 'translate(' + cx + ',' + cy + ') rotate(49)')
-        .transition().duration(animationDuration / 2)
+        .attr('transform', 'translate(' + cx + ',' + cy + ') rotate(41.75)')
+        .transition().duration(specs.animationDuration / 2)
         .attr('rx', ellipseData.ellipse_minor)
         .attr('ry', ellipseData.ellipse_major)
 
@@ -64,30 +56,11 @@ const drawEllipse = (data, svg, width, height, color, r) => {
         .attr('ry', 0)
         .attr('stroke', color)
         .attr('fill', 'none')
-        .attr('transform', 'translate(' + cx + ',' + cy + ') rotate(49)')
-        .transition().duration(animationDuration / 2)
+        .attr('transform', 'translate(' + cx + ',' + cy + ') rotate(41.75)')
+        .transition().duration(specs.animationDuration / 2)
         .attr('rx', ellipseData.ellipse_minor)
         .attr('ry', ellipseData.ellipse_major)
 
-}
-
-
-const buildChart = (data1, data2, svg, specs, r1, r2) => {
-    console.log("building ellipse...")
-    const g1 = svg.append("g")
-    const g2 = svg.append("g").attr("transform", "translate(400, 0)")
-
-
-    createChart(g1, specs.width, specs.height, data1, specs.color1)
-    createChart(g2, specs.width, specs.height, data2, specs.color2)
-
-    drawEllipse(data1, g1, specs.width, specs.height, specs.color1, r1)
-    drawEllipse(data2, g2, specs.width, specs.height, specs.color2, r2)
-
-    drawTrendline(data1, g1, specs)
-    drawTrendline(data2, g2, specs)
-
-    animateMerge(g1, g2, specs)
 }
 
 
@@ -95,7 +68,5 @@ const buildChart = (data1, data2, svg, specs, r1, r2) => {
 export function ellipse(data1, data2, specs, r1, r2) {
     const svg = d3.select('#container')
         .append('svg').attr('width', specs.width * 2).attr('height', specs.height)
-    margin = specs.margin
-    animationDuration = specs.margin
-    buildChart(data1, data2, svg, specs, r1, r2)
+    buildChart(data1, data2, svg, specs, r1, r2, drawEllipse)
 }

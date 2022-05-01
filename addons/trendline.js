@@ -3,8 +3,8 @@ export const drawTrendline = (data, svg, specs) => {
     const inner_width = specs.width - specs.margin.left - specs.margin.right;
 
     const lineData = [
-        [0 + 10, inner_width - 10],
-        [inner_height - 10, 0 + 10]
+        [0 + 10, inner_height - 10],
+        [inner_width - 10, 0 + 10]
     ]
 
     const line = d3.line().context(null)

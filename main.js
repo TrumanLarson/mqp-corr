@@ -4,8 +4,27 @@ import { ellipse } from "./ideas/ellipse.js"
 import { generateDataSet } from "./base/datagen.js"
 
 let r1 = .5
-let r2 = .6
+let r2 = .98
 
+
+/*
+
+
+- menu feature selection
+	- clean ui
+	- select from 
+        - chart type, 
+        - rotation, 
+        - transformation, 
+        - axis fade, 
+        - r values, 
+        - trendline, 
+        - animation speed, etc
+- click to switch highlight
+- convex hull draw function
+
+
+*/
 const specs = {
     width: 400,
     height: 400,

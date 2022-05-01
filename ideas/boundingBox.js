@@ -1,13 +1,8 @@
-import { createChart } from "../base/chart.js"
-import { drawTrendline } from "../addons/trendline.js";
-import { animateMerge } from "../addons/merge.js";
+import { buildChart } from '../base/buildChart.js'
 
-let margin = null
-let animationDuration = null
-
-const drawMargin = (data, svg, width, height, color) => {
-    const inner_height = height - margin.bottom;
-    const inner_width = width - margin.left - margin.right;
+const drawMargin = (data, svg, specs, color) => {
+    const inner_height = specs.height - specs.margin.bottom;
+    const inner_width = specs.width - specs.margin.left - specs.margin.right;
     const xAry = data.map(d => d[0]);
     const yAry = data.map(d => d[1]);
     var xScale = d3.scaleLinear().range([0, inner_width]);
@@ -63,13 +58,13 @@ const drawMargin = (data, svg, width, height, color) => {
         .transition()
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0)
-        .duration(animationDuration / 2)
+        .duration(specs.animationDuration / 2)
     botPath.attr("stroke-dasharray", botLength + " " + botLength)
         .attr("stroke-dashoffset", botLength)
         .transition()
         .ease(d3.easeLinear)
         .attr("stroke-dashoffset", 0)
-        .duration(animationDuration / 2)
+        .duration(specs.animationDuration / 2)
 
     svg.append("polygon")
         .attr("points", function() {
@@ -83,7 +78,7 @@ const drawMargin = (data, svg, width, height, color) => {
         .attr("stroke", "none")
         .attr("fill", color)
         .attr("opacity", 0.1)
-        .transition().duration(animationDuration / 2)
+        .transition().duration(specs.animationDuration / 2)
         .attr("points", function() {
             return [
                 topLineData[0].join(","),
@@ -95,29 +90,9 @@ const drawMargin = (data, svg, width, height, color) => {
 }
 
 
-const buildChart = (data1, data2, svg, specs) => {
-    console.log("building bounding box...")
-    const g1 = svg.append("g")
-    const g2 = svg.append("g").attr("transform", "translate(400, 0)")
-
-    createChart(g1, specs.width, specs.height, data1)
-    createChart(g2, specs.width, specs.height, data2)
-
-    drawMargin(data1, g1, specs.width, specs.height, specs.color1)
-    drawMargin(data2, g2, specs.width, specs.height, color2)
-
-    drawTrendline(data1, g1, specs)
-    drawTrendline(data2, g2, specs)
-
-    animateMerge(g1, g2, specs)
-}
-
-
 
 export function boundingBox(data1, data2, specs, r1, r2) {
     const svg = d3.select('#container')
         .append('svg').attr('width', specs.width * 2).attr('height', specs.height)
-    margin = specs.margin
-    animationDuration = specs.animationDuration
-    buildChart(data1, data2, svg, specs)
+    buildChart(data1, data2, svg, specs, r1, r2, drawMargin)
 }
