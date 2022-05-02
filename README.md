@@ -17,4 +17,5 @@ All of the other code is written by myself or Madyson Kelly.
 The only non-obvious feature in this project is the click to toggle feature that is active when the merge option is selected.  
 
 [Project Book](https://trumanlarson.github.io/mqp-corr/process-book/process-book.pdf)
+
 [Video](https://youtu.be/nKRtpC5UTgA)
