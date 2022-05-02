@@ -30,13 +30,13 @@ const drawMargin = (data, svg, specs, color) => {
     const absMaxDis = yScale(yScale.domain()[1] - maxDis)
 
     const topLineData = [
-        [0 + 10, inner_width - 10 - absMaxDis],
-        [inner_height - 10, 0 + 10 - absMaxDis]
+        [0 + 10, inner_height - 10 - absMaxDis],
+        [inner_width - 10, 0 + 10 - absMaxDis]
     ]
 
     const botLineData = [
-        [0 + 10, inner_width - 10 + absMaxDis],
-        [inner_height - 10, 0 + 10 + absMaxDis]
+        [0 + 10, inner_height - 10 + absMaxDis],
+        [inner_width - 10, 0 + 10 + absMaxDis]
     ]
 
     const line = d3.line().context(null)

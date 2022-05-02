@@ -1,28 +1,131 @@
 <!DOCTYPE html>
 <html>
 
-<body>
-
-
-    <div id='container'></div>
-
+<head>
     <script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
     <script src="//cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-dropdown/dropdown.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-transition/transition.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-sidebar/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-button/button.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-forms/form.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-checkbox/checkbox.min.css">
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="semantic-dropdown/dropdown.min.js"></script>
+    <script src="semantic-transition/transition.min.js"></script>
+    <script src="semantic-sidebar/sidebar.min.js"></script>
+    <script src="semantic-forms/form.min.js"></script>
+    <script src="semantic-checkbox/checkbox.min.js"></script>
+
 
     <script src="https://d3js.org/d3.v6.min.js"></script>
 
+    <script src="convex-hull.js"></script>
     <script type="module" src="main.js"></script>
-    <br>
-    <form id="frm1">
-        R1 <input id='r1' type="number" name="r1"> R2 <input id='r2' type="number" name="r2"><br><br>
-        <input type="button" id="redraw" value="Redraw">
-    </form>
+    <style>
+        body {
+            padding: 1em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        #options {
+            padding: 1em;
+            margin: 0.5em;
+        }
+        
+        #container {
+            padding: 1em;
+            margin: 0.5em;
+        }
+        
+        #form {
+            justify-content: left;
+        }
+        
+        .field {
+            width: 75%;
+        }
+        
+        .ui.checkbox label {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .ui.dropdown.selection {
+            width: 75%;
+            min-width: unset;
+            min-height: unset;
+        }
+        
+        .stack {
+            display: block;
+            float: left;
+            height: 100%
+        }
+    </style>
+</head>
 
+<body>
+
+
+    <br>
+    <div class="ui left vertical menu sidebar" id='options' style="background-color: #D3D3D3; ">
+        <h1>Settings</h1>
+        <h4>Feedback Type</h4>
+        <select class="ui dropdown" id="select">
+            
+            <option value="convexHull">Convex Hull</option> 
+            <option value="ellipse">Ellipse</option>
+            <option value="boundingBox">Bounding Box</option>
+            <option value="distance">Distance</option>
+            <option value="none">None</option>
+        </select>
+
+        <br><br>
+        <div class="ui form" id="form">
+
+            <div class="ui checkbox">
+                <input id="merge" type="checkbox">
+                <label>Merge</label>
+            </div><br>
+            <div class="ui checkbox">
+                <input id="rotate" type="checkbox">
+                <label>Rotate</label>
+            </div><br>
+            <div class="ui checkbox">
+                <input id="fadeAxis" type="checkbox">
+                <label>Fade Axis</label>
+            </div><br>
+            <div class="ui checkbox">
+                <input id="trendline" type="checkbox">
+                <label>Trendline</label>
+            </div><br><br>
+            <div class="field">
+                <label>Animation Speed</label>
+                <input id='speed' type="number" name="speed">
+            </div>
+
+            <div class="field">
+                <label>R Coef 1</label>
+                <input id='r1' type="number" name="r1">
+            </div>
+
+            <div class="field">
+                <label>R Coef 2</label>
+                <input id='r2' type="number" name="r2"><br><br>
+            </div>
+        </div>
+        <button class="ui button" id="draw">Draw</button>
+    </div>
+    <div class="pusher" id='container'>
+        <div class="stack">
+            <button class="ui button" id="redraw">Redraw</button>
+            <button class="ui button" id="settings">Settings</button>
+        </div>
+    </div>
 
 </body>
 
