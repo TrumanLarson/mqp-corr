@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.23)  2 MAY 2022 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.23)  2 MAY 2022 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -198,23 +198,31 @@ File: ./images//toggle.png Graphic file (type png)
 <use ./images//toggle.png>
 Package pdftex.def Info: ./images//toggle.png  used on input line 129.
 (pdftex.def)             Requested size: 97.59851pt x 59.57178pt.
+<./images//ui.png, id=33, 688.07062pt x 460.72125pt>
+File: ./images//ui.png Graphic file (type png)
+<use ./images//ui.png>
+Package pdftex.def Info: ./images//ui.png  used on input line 138.
+(pdftex.def)             Requested size: 244.0pt x 163.37791pt.
 
-(process-book.bbl
-Underfull \vbox (badness 3942) has occurred while \output is active []
+Overfull \hbox (13.55063pt too wide) in paragraph at lines 138--139
+ [][] 
+ []
 
- [3 <./images//convex.png> <./images//ellipse-final.png> <./images//bounding-fi
-nal.png> <./images//distance-final.png>]) [4 <./images//convex-final.png> <./im
-ages//merge.png> <./images//merge-rotate.png> <./images//toggle.png>] (process-
-book.aux)
+[3 <./images//convex.png> <./images//ellipse-final.png> <./images//bounding-fin
+al.png> <./images//distance-final.png>] (process-book.bbl) [4 <./images//convex
+-final.png> <./images//merge.png> <./images//merge-rotate.png> <./images//toggl
+e.png>] [5
+
+ <./images//ui.png>] (process-book.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1475 strings out of 478659
- 25955 string characters out of 2845920
- 329385 words of memory out of 3000000
- 19607 multiletter control sequences out of 15000+600000
+ 1487 strings out of 478659
+ 26152 string characters out of 2845920
+ 330394 words of memory out of 3000000
+ 19619 multiletter control sequences out of 15000+600000
  408059 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,62p,1315b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -226,9 +234,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/truma/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/truma/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/truma/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on process-book.pdf (4 pages, 553469 bytes).
+Output written on process-book.pdf (5 pages, 594083 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
