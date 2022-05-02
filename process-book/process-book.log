@@ -1,0 +1,234 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.23)  2 MAY 2022 14:18
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./process-book.tex
+(process-book.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2021-11-22>
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/base\proc.cls
+Document Class: proc 2020/11/23 v1.3l Standard LaTeX document class
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+))
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+)
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count191
+\l__pdf_internal_box=\box50
+) (process-book.aux)
+\openout1 = `process-book.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count192
+\scratchdimen=\dimen141
+\scratchbox=\box51
+\nofMPsegments=\count193
+\nofMParguments=\count194
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count195
+\MPscratchDim=\dimen142
+\MPnumerator=\count196
+\makeMPintoPDFobject=\count197
+\everyMPtoPDFconversion=\toks18
+)
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\truma\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+<./images//methods.png, id=1, 260.47313pt x 153.57375pt>
+File: ./images//methods.png Graphic file (type png)
+<use ./images//methods.png>
+Package pdftex.def Info: ./images//methods.png  used on input line 17.
+(pdftex.def)             Requested size: 244.0pt x 143.86253pt.
+
+Overfull \hbox (13.55063pt too wide) in paragraph at lines 17--18
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `methods' on page 1 undefined on input line 21.
+
+<./images//concepts.png, id=3, 500.62032pt x 409.53pt>
+File: ./images//concepts.png Graphic file (type png)
+<use ./images//concepts.png>
+Package pdftex.def Info: ./images//concepts.png  used on input line 26.
+(pdftex.def)             Requested size: 244.0pt x 199.60289pt.
+
+Overfull \hbox (13.55063pt too wide) in paragraph at lines 26--27
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1{C:/Users/truma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+
+ <./images//methods.png> <./images//concepts.png>]
+<./images//ellipse.png, id=16, 165.61874pt x 147.55125pt>
+File: ./images//ellipse.png Graphic file (type png)
+<use ./images//ellipse.png>
+Package pdftex.def Info: ./images//ellipse.png  used on input line 46.
+(pdftex.def)             Requested size: 97.59851pt x 86.9509pt.
+<./images//bounding.png, id=17, 167.87718pt x 147.55125pt>
+File: ./images//bounding.png Graphic file (type png)
+<use ./images//bounding.png>
+Package pdftex.def Info: ./images//bounding.png  used on input line 52.
+(pdftex.def)             Requested size: 97.59851pt x 85.7824pt.
+<./images//distance.png, id=18, 163.3603pt x 151.3153pt>
+File: ./images//distance.png Graphic file (type png)
+<use ./images//distance.png>
+Package pdftex.def Info: ./images//distance.png  used on input line 58.
+(pdftex.def)             Requested size: 97.59851pt x 90.40198pt.
+<./images//convex.png, id=19, 164.11313pt x 146.04562pt>
+File: ./images//convex.png Graphic file (type png)
+<use ./images//convex.png>
+Package pdftex.def Info: ./images//convex.png  used on input line 64.
+(pdftex.def)             Requested size: 97.59851pt x 86.85475pt.
+ [2 <./images//ellipse.png> <./images//bounding.png> <./images//distance.png>]
+<./images//ellipse-final.png, id=26, 584.1825pt x 305.64188pt>
+File: ./images//ellipse-final.png Graphic file (type png)
+<use ./images//ellipse-final.png>
+Package pdftex.def Info: ./images//ellipse-final.png  used on input line 83.
+(pdftex.def)             Requested size: 97.59851pt x 51.06299pt.
+<./images//bounding-final.png, id=27, 569.12625pt x 305.64188pt>
+File: ./images//bounding-final.png Graphic file (type png)
+<use ./images//bounding-final.png>
+Package pdftex.def Info: ./images//bounding-final.png  used on input line 89.
+(pdftex.def)             Requested size: 97.59851pt x 52.4108pt.
+<./images//distance-final.png, id=28, 569.87906pt x 304.88907pt>
+File: ./images//distance-final.png Graphic file (type png)
+<use ./images//distance-final.png>
+Package pdftex.def Info: ./images//distance-final.png  used on input line 95.
+(pdftex.def)             Requested size: 97.59851pt x 52.21193pt.
+<./images//convex-final.png, id=29, 569.87906pt x 301.8778pt>
+File: ./images//convex-final.png Graphic file (type png)
+<use ./images//convex-final.png>
+Package pdftex.def Info: ./images//convex-final.png  used on input line 101.
+(pdftex.def)             Requested size: 97.59851pt x 51.69626pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\OT1/cmr/m/n/10 Nayuki (https://www.nayuki.io/page/convex-hull-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<./images//merge.png, id=30, 307.90031pt x 293.59688pt>
+File: ./images//merge.png Graphic file (type png)
+<use ./images//merge.png>
+Package pdftex.def Info: ./images//merge.png  used on input line 114.
+(pdftex.def)             Requested size: 97.59851pt x 93.0614pt.
+<./images//merge-rotate.png, id=31, 408.02437pt x 230.36063pt>
+File: ./images//merge-rotate.png Graphic file (type png)
+<use ./images//merge-rotate.png>
+Package pdftex.def Info: ./images//merge-rotate.png  used on input line 120.
+(pdftex.def)             Requested size: 97.59851pt x 55.10138pt.
+<./images//toggle.png, id=32, 405.76593pt x 247.67531pt>
+File: ./images//toggle.png Graphic file (type png)
+<use ./images//toggle.png>
+Package pdftex.def Info: ./images//toggle.png  used on input line 129.
+(pdftex.def)             Requested size: 97.59851pt x 59.57178pt.
+
+(process-book.bbl
+Underfull \vbox (badness 3942) has occurred while \output is active []
+
+ [3 <./images//convex.png> <./images//ellipse-final.png> <./images//bounding-fi
+nal.png> <./images//distance-final.png>]) [4 <./images//convex-final.png> <./im
+ages//merge.png> <./images//merge-rotate.png> <./images//toggle.png>] (process-
+book.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1475 strings out of 478659
+ 25955 string characters out of 2845920
+ 329385 words of memory out of 3000000
+ 19607 multiletter control sequences out of 15000+600000
+ 408059 words of font info for 42 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,9n,62p,1315b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+ <C:\Users\truma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Users/truma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/truma/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/truma/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/truma/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/truma/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/truma/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on process-book.pdf (4 pages, 553469 bytes).
+PDF statistics:
+ 77 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+
