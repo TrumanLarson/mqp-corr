@@ -3,7 +3,7 @@
 In this repo contains my code, libraries I used, and my process book. 
 
 ### Libraries
-- All of the code in the semantc-* folders are compondents from the semantic-ui library. 
+- All of the code in the semantic-* folders are compondents from the semantic-ui library. 
 - The convex-hull.js file is from [this](https://www.nayuki.io/page/convex-hull-algorithm) project.
 - The base/chart.js and base/datagen.js files were provided by Lane Harrison and Yiren Ding
 - The ellipse algorithm was also provided through Lane Harrison from other sources
